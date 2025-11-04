@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VenturePathtravel - Minimalist Lifestyle Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+                        <path d="M20 15L28 20V25L20 30L12 25V20L20 15Z" fill="#1a1a1a"/>
+                    </svg>
+                    <span>VenturePathtravel</span>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Discover Your Path</h1>
+            <p class="hero-subtitle">Curated insights on lifestyle, travel, and wellness</p>
+        </div>
+    </section>
+
+    <!-- Search & Filter -->
+    <section class="search-section">
+        <div class="container">
+            <form class="search-bar" id="searchForm" action="search.html" method="get">
+                <input type="text" id="searchInput" name="q" placeholder="Search articles..." required>
+                <button type="submit" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <div class="categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="fashion">Fashion & Accessories</button>
+                <button class="category-btn" data-category="health">Health & Beauty</button>
+                <button class="category-btn" data-category="home">Home & Garden</button>
+                <button class="category-btn" data-category="travel">Travel & Accommodation</button>
+                <button class="category-btn" data-category="finance">Finance & Insurance</button>
+                <button class="category-btn" data-category="food">Food & Beverage</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <main class="main-content">
+        <div class="container">
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Article 1: Travel -->
+                <article class="article-card" data-category="travel" data-date="2025-08-15">
+                    <a href="article-1.html">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80" alt="Luxury mountain resort" loading="lazy">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Travel & Accommodation</span>
+                            <h2 class="article-title">Top 10 Mountain Resorts for Your Perfect Retreat</h2>
+                            <p class="article-excerpt">Discover the most breathtaking mountain destinations that offer luxury, tranquility, and unforgettable experiences.</p>
+                            <div class="article-meta">
+                                <span class="article-date">August 15, 2025</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Article 2: Fashion -->
+                <article class="article-card" data-category="fashion" data-date="2025-06-20">
+                    <a href="article-2.html">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80" alt="Minimalist fashion accessories" loading="lazy">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Fashion & Accessories</span>
+                            <h2 class="article-title">Minimalist Wardrobe Essentials for Modern Living</h2>
+                            <p class="article-excerpt">Build a timeless wardrobe with these essential pieces that combine elegance, versatility, and sustainability.</p>
+                            <div class="article-meta">
+                                <span class="article-date">June 20, 2025</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Article 3: Health -->
+                <article class="article-card" data-category="health" data-date="2025-05-10">
+                    <a href="article-3.html">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80" alt="Natural skincare products" loading="lazy">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Health & Beauty</span>
+                            <h2 class="article-title">The Ultimate Guide to Natural Skincare Routine</h2>
+                            <p class="article-excerpt">Transform your skin with these carefully selected natural products and science-backed beauty routines.</p>
+                            <div class="article-meta">
+                                <span class="article-date">May 10, 2025</span>
+                                <span class="read-time">7 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Article 4: Food -->
+                <article class="article-card" data-category="food" data-date="2025-03-15">
+                    <a href="article-4.html">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80" alt="Artisan coffee" loading="lazy">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Food & Beverage</span>
+                            <h2 class="article-title">Coffee Lover's Guide: Best Specialty Beans</h2>
+                            <p class="article-excerpt">Explore the world of specialty coffee with our curated selection of premium beans and brewing methods.</p>
+                            <div class="article-meta">
+                                <span class="article-date">March 15, 2025</span>
+                                <span class="read-time">5 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Article 5: Home -->
+                <article class="article-card" data-category="home" data-date="2025-01-20">
+                    <a href="article-5.html">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Minimalist home interior" loading="lazy">
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">Home & Garden</span>
+                            <h2 class="article-title">Creating Zen Spaces: Minimalist Home Design</h2>
+                            <p class="article-excerpt">Learn how to transform your living space into a peaceful sanctuary with minimalist design principles.</p>
+                            <div class="article-meta">
+                                <span class="article-date">January 20, 2025</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VenturePathtravel</h3>
+                    <p>Exploring life's journey through curated content on lifestyle, travel, and wellness.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="index.html" data-category="fashion">Fashion & Accessories</a></li>
+                        <li><a href="index.html" data-category="health">Health & Beauty</a></li>
+                        <li><a href="index.html" data-category="travel">Travel & Accommodation</a></li>
+                        <li><a href="index.html" data-category="food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/venturepath" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://linkedin.com/company/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VenturePathtravel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - VenturePathtravel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 5L35 15V25L20 35L5 25V15L20 5Z" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+                        <path d="M20 15L28 20V25L20 30L12 25V20L20 15Z" fill="#1a1a1a"/>
+                    </svg>
+                    <span>VenturePathtravel</span>
+                </a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 id="searchTitle">Search Results</h1>
+            <p id="searchSubtitle">Finding articles for your query...</p>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="container">
+            <form class="search-bar" id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search articles..." value="">
+                <button type="submit" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Search Results -->
+    <main class="main-content">
+        <div class="container">
+            <div class="articles-grid" id="searchResults">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResultsMessage" style="display: none; text-align: center; padding: 4rem 2rem;">
+                <i class="fas fa-search" style="font-size: 4rem; color: #e5e5e5; margin-bottom: 1rem;"></i>
+                <h2 style="font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; color: #1a1a1a;">No Results Found</h2>
+                <p style="color: #666; font-size: 1.1rem; margin-bottom: 2rem;">We couldn't find any articles matching your search.</p>
+                <a href="index.html" style="display: inline-block; padding: 1rem 2rem; background-color: #1a1a1a; color: white; border-radius: 50px; font-weight: 500; transition: all 0.3s;">
+                    Browse All Articles
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VenturePathtravel</h3>
+                    <p>Exploring life's journey through curated content on lifestyle, travel, and wellness.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                            <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="privacy.html">Privacy Policy</a></li>
+                                </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="index.html" data-category="fashion">Fashion & Accessories</a></li>
+                        <li><a href="index.html" data-category="health">Health & Beauty</a></li>
+                        <li><a href="index.html" data-category="travel">Travel & Accommodation</a></li>
+                        <li><a href="index.html" data-category="food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/venturepath" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://linkedin.com/company/venturepathtravel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VenturePathtravel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Articles database
+        const articles = [
+            {
+                title: "Top 10 Mountain Resorts for Your Perfect Retreat",
+                category: "Travel & Accommodation",
+                excerpt: "Discover the most breathtaking mountain destinations that offer luxury, tranquility, and unforgettable experiences.",
+                date: "August 15, 2025",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80",
+                link: "article-1.html",
+                categorySlug: "travel"
+            },
+            {
+                title: "Minimalist Wardrobe Essentials for Modern Living",
+                category: "Fashion & Accessories",
+                excerpt: "Build a timeless wardrobe with these essential pieces that combine elegance, versatility, and sustainability.",
+                date: "June 20, 2025",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
+                link: "article-2.html",
+                categorySlug: "fashion"
+            },
+            {
+                title: "The Ultimate Guide to Natural Skincare Routine",
+                category: "Health & Beauty",
+                excerpt: "Transform your skin with these carefully selected natural products and science-backed beauty routines.",
+                date: "May 10, 2025",
+                readTime: "7 min read",
+                image: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&q=80",
+                link: "article-3.html",
+                categorySlug: "health"
+            },
+            {
+                title: "Coffee Lover's Guide: Best Specialty Beans",
+                category: "Food & Beverage",
+                excerpt: "Explore the world of specialty coffee with our curated selection of premium beans and brewing methods.",
+                date: "March 15, 2025",
+                readTime: "5 min read",
+                image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&q=80",
+                link: "article-4.html",
+                categorySlug: "food"
+            },
+            {
+                title: "Creating Zen Spaces: Minimalist Home Design",
+                category: "Home & Garden",
+                excerpt: "Learn how to transform your living space into a peaceful sanctuary with minimalist design principles.",
+                date: "January 20, 2025",
+                readTime: "6 min read",
+                image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
+                link: "article-5.html",
+                categorySlug: "home"
+            }
+        ];
+
+        // Get search query from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('q') || '';
+
+        // Update search input with query
+        const searchInput = document.getElementById('searchInput');
+        searchInput.value = searchQuery;
+
+        // Perform search
+        function performSearch(query) {
+            const searchResults = document.getElementById('searchResults');
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            const searchTitle = document.getElementById('searchTitle');
+            const searchSubtitle = document.getElementById('searchSubtitle');
+
+            // Clear previous results
+            searchResults.innerHTML = '';
+
+            if (!query || query.trim() === '') {
+                searchTitle.textContent = 'Search Results';
+                searchSubtitle.textContent = 'Enter a search term to find articles';
+                noResultsMessage.style.display = 'none';
+                return;
+            }
+
+            // Filter articles
+            const results = articles.filter(article => {
+                const searchLower = query.toLowerCase();
+                return article.title.toLowerCase().includes(searchLower) ||
+                       article.excerpt.toLowerCase().includes(searchLower) ||
+                       article.category.toLowerCase().includes(searchLower);
+            });
+
+            // Update title
+            searchTitle.textContent = `Search Results for "${query}"`;
+            searchSubtitle.textContent = `Found ${results.length} ${results.length === 1 ? 'article' : 'articles'}`;
+
+            if (results.length === 0) {
+                noResultsMessage.style.display = 'block';
+                searchResults.style.display = 'none';
+            } else {
+                noResultsMessage.style.display = 'none';
+                searchResults.style.display = 'grid';
+
+                // Display results
+                results.forEach((article, index) => {
+                    const articleCard = document.createElement('article');
+                    articleCard.className = 'article-card';
+                    articleCard.style.animationDelay = `${index * 0.1}s`;
+                    
+                    articleCard.innerHTML = `
+                        <a href="${article.link}">
+                            <div class="article-image">
+                                <img src="${article.image}" alt="${article.title}">
+                            </div>
+                            <div class="article-content">
+                                <span class="article-category">${article.category}</span>
+                                <h2 class="article-title">${highlightText(article.title, query)}</h2>
+                                <p class="article-excerpt">${highlightText(article.excerpt, query)}</p>
+                                <div class="article-meta">
+                                    <span class="article-date">${article.date}</span>
+                                    <span class="read-time">${article.readTime}</span>
+                                </div>
+                            </div>
+                        </a>
+                    `;
+                    
+                    searchResults.appendChild(articleCard);
+                });
+            }
+        }
+
+        // Highlight matching text
+        function highlightText(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<mark style="background-color: #fff3cd; padding: 0 2px;">$1</mark>');
+        }
+
+        // Handle search form submission
+        const searchForm = document.getElementById('searchForm');
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newQuery = searchInput.value.trim();
+            if (newQuery) {
+                window.location.href = `search.html?q=${encodeURIComponent(newQuery)}`;
+            }
+        });
+
+        // Perform initial search
+        performSearch(searchQuery);
+
+        // Handle Enter key in search input
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                searchForm.dispatchEvent(new Event('submit'));
+            }
+        });
+    </script>
+</body>
+</html>
+
