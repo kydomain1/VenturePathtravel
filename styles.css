@@ -613,6 +613,17 @@ img {
     margin-bottom: var(--spacing-lg);
 }
 
+.article-body a {
+    color: #0f62fe;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.article-body a:hover {
+    color: #0043ce;
+    text-decoration-color: #0043ce;
+}
+
 .product-recommendation {
     background-color: var(--secondary-color);
     padding: var(--spacing-md);
